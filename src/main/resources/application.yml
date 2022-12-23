@@ -1,0 +1,22 @@
+spring:
+  jpa:
+    database: POSTGRESQL
+    show-sql: true
+    hibernate:
+      ddl-auto: create-drop
+  datasource:
+    url: jdbc:postgresql://localhost:5432/keycloak
+    username: postgres
+    password: root123
+    driverClassName: org.postgresql.Driver
+  sql:
+    init:
+      platform: postgres
+
+  keycloak :
+    realm : dilafruz
+    auth-server-url: http://localhost:9090/auth
+    resource : keycloak
+    public-client : true
+    bearer-only : true
+
